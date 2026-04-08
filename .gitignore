@@ -1,0 +1,5 @@
+__pycache__/
+.qoder/
+.env
+*.xlsx
+*.json
