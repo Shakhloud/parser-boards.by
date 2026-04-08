@@ -1,4 +1,14 @@
-from sqlalchemy import Column, Integer, String, Float, Boolean, DateTime, ForeignKey, Text, UniqueConstraint
+from sqlalchemy import (
+    Column,
+    Integer,
+    String,
+    Float,
+    Boolean,
+    DateTime,
+    ForeignKey,
+    Text,
+    UniqueConstraint,
+)
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 
@@ -36,8 +46,12 @@ class Construction(Base):
         nullable=False,
         comment="Полный адрес: «г. Минск, пр. Независимости, 100»",
     )
-    lon = Column(Float, nullable=False, comment="Долгота (десятичный формат, напр. 27.5766)")
-    lat = Column(Float, nullable=False, comment="Широта (десятичный формат, напр. 53.9)")
+    lon = Column(
+        Float, nullable=False, comment="Долгота (десятичный формат, напр. 27.5766)"
+    )
+    lat = Column(
+        Float, nullable=False, comment="Широта (десятичный формат, напр. 53.9)"
+    )
 
     # --- Характеристики конструкции ---
     construction_format = Column(
